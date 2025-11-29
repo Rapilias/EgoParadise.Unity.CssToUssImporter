@@ -4,6 +4,6 @@ Unity で .css を .ussとしてインポートするためのScriptedImporter�
 
 ## Installation
 ```
-https://github.com/Rapilias/EgoParadise.Unity.CssToUssImporter.git?path=/Unity/Unity.CssToUssTranspiler/Packages/com.egoparadise.unity.css-to-uss-importer
+https://github.com/Rapilias/EgoParadise.Unity.CssToUssImporter.git?path=/Unity/Unity.CssToUssTranspiler/Assets/Packages/com.egoparadise.unity.css-to-uss-importer
 ```
 
