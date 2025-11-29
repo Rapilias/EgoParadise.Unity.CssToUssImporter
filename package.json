@@ -4,6 +4,7 @@
   "packageManager": "pnpm@10.22.0",
   "scripts": {
     "css": "pnpm -F css-transpiler",
+    "update-changelog": "pnpm css update-changelog",
     "build-and-deploy": "pnpm css build",
     "format": "npx @biomejs/biome format --write ./",
     "packages-upgrade": "pnpm prune && pnpm dedupe && pnpm i"

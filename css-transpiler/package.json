@@ -14,6 +14,7 @@
   },
   "scripts": {
     "build": "tsx ./scripts/build.ts",
+    "update-changelog": "tsx ./scripts/update-changelog",
     "test01": "node ./dist/transpile.mjs ./test/01.css ./test/01.out.css"
   }
 }
