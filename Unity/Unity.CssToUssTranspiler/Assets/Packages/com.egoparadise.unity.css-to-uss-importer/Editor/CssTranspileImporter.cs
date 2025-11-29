@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Threading;
 using UnityEditor.AssetImporters;
 using UnityEngine;
@@ -48,9 +49,10 @@ namespace EgoParadise.Unity.Utility.Editor
             ctx.SetMainObject(asset);
         }
 
-        private static string CssToUss(string inputAssetPath)
+        private static string CssToUss(string inputAssetPath, [CallerFilePath] string scriptFilePath = "")
         {
-            var editorPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            // Note: CallerFilePathでこのスクリプトファイルのパスを取得して、nodeフォルダを相対的に見つける
+            var editorPath = Path.GetDirectoryName(scriptFilePath);
             var workingDirectory = Path.GetFullPath(editorPath!);
             var assetPath = Path.GetFullPath(inputAssetPath);
 
