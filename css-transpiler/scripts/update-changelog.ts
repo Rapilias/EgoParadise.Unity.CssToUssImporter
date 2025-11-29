@@ -8,19 +8,22 @@ const executeAsync = async () => {
   // CHANGELOGを読み込む
   const changelogContent = fs.readFileSync(CHANGELOG_PATH, "utf-8").replace(/\r/g, "");
   
-  // セパレーター以前の内容を抽出
+  // セパレーター以前の内容を抽出（最初の2行をスキップ）
   const lines = changelogContent.split("\n");
   const separatorIndex = lines.findIndex(line => line.trim() === SEPARATOR);
   const relevantLines = separatorIndex !== -1 
-    ? lines.slice(0, separatorIndex)
-    : lines;
+    ? lines.slice(2, separatorIndex)
+    : lines.slice(2);
+  
+  // 各行から##を削除
+  const processedLines = relevantLines.map(line => line.replace(/^##\s*/, ""));
   
   // 末尾の空行を削除
-  while (relevantLines.length > 0 && relevantLines[relevantLines.length - 1].trim() === "") {
-    relevantLines.pop();
+  while (processedLines.length > 0 && processedLines[processedLines.length - 1].trim() === "") {
+    processedLines.pop();
   }
   
-  const changelogText = relevantLines.join("\n");
+  const changelogText = processedLines.join("\n");
   
   // package.jsonを読み込む
   const packageJson = JSON.parse(fs.readFileSync(PACKAGE_JSON_PATH, "utf-8"));
