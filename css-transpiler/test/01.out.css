@@ -1,0 +1,12 @@
+.aaa {
+  color: white;
+}
+.aaa .bbb {
+  color: blue;
+}
+.aaa .bbb .ccc {
+  color: green;
+}
+.aaa .bbb .ccc:hover {
+  color: red;
+}

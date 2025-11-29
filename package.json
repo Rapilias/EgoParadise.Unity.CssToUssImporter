@@ -1,0 +1,14 @@
+{
+  "name": "aqualit",
+  "version": "1.0.0",
+  "packageManager": "pnpm@10.22.0",
+  "scripts": {
+    "css": "pnpm -F css-transpiler",
+    "build-and-deploy": "pnpm css build",
+    "format": "npx @biomejs/biome format --write ./",
+    "packages-upgrade": "pnpm prune && pnpm dedupe && pnpm i"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.3.8"
+  }
+}

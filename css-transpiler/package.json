@@ -1,0 +1,19 @@
+{
+  "name": "css-transpiler",
+  "type": "module",
+  "dependencies": {
+    "postcss": "^8.5.6",
+    "postcss-custom-properties": "^14.0.6",
+    "postcss-nested": "^7.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "esbuild": "^0.27.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  },
+  "scripts": {
+    "build": "tsx ./scripts/build.ts",
+    "test01": "node ./dist/transpile.mjs ./test/01.css ./test/01.out.css"
+  }
+}

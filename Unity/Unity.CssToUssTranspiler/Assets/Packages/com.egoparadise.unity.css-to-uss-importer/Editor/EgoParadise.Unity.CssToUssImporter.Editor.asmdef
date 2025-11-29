@@ -1,0 +1,16 @@
+{
+  "name": "EgoParadise.Unity.CssToUssImporter.Editor",
+  "rootNamespace": "EgoParadise.Unity.CssToUssImporter.Editor",
+  "references": [],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

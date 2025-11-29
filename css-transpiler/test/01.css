@@ -1,0 +1,13 @@
+
+.aaa {
+  color: white;
+  .bbb {
+    color: blue;
+    .ccc {
+      color: green;
+      &:hover {
+        color: red;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "com.egoparadise.unity.css-to-uss-importer",
+  "version": "1.0.0",
+  "displayName": "CSS to USS Importer",
+  "description": "Unity ScriptedImporter for CSS to USS conversion",
+  "unity": "6000.3",
+  "author": {
+    "name": "egoparadise"
+  }
+}
